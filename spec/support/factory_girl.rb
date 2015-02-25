@@ -8,6 +8,7 @@ FactoryGirl.define do
   end
 
   factory :profile do
+    user
     first_name 'John'
     last_name 'Ko'
     birthday { Date.today - 19.years }

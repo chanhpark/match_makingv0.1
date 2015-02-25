@@ -12,14 +12,11 @@ describe User do
     it { should respond_to :last_sign_in_at }
     it { should respond_to :current_sign_in_ip }
     it { should respond_to :last_sign_in_ip }
-    it { should respond_to :failed_attempts }
-    it { should respond_to :unlock_token }
-    it { should respond_to :locked_at }
     it { should respond_to :created_at }
     it { should respond_to :updated_at }
   end
 
   describe "associations" do
-    it { should belong_to :profile }
+    it { should have_one :profile }
   end
 end

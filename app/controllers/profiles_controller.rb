@@ -2,6 +2,10 @@ class ProfilesController < ApplicationController
 
   def index
     @profile = Profile.find_by(user_id: current_user.id)
+    if @profile != nil
+    else
+      redirect_to new_profile_path
+    end
   end
 
   def new
