@@ -5,4 +5,5 @@ class Profile < ActiveRecord::Base
   validates :last_name, presence: true
   validates :birthday, presence: true
   validates :zip_code, presence: true
+  validates_uniqueness_of :user_id
 end
