@@ -3,6 +3,10 @@
 <%= simple_form_for @profile do |f| %>
 
   <div class="field">
+    <%= f.file_field :avatar, class: "panel3"%>
+  </div>
+
+  <div class="field">
     <%= f.input :first_name, label: 'First Name' %>
   </div>
 
