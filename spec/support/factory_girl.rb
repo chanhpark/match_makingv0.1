@@ -7,9 +7,11 @@ FactoryGirl.define do
     password_confirmation 'password'
   end
 
-  factor :profile do
+  factory :profile do
+    user
     first_name 'John'
     last_name 'Ko'
     birthday { Date.today - 19.years }
     zip_code '07650'
+  end
 end
