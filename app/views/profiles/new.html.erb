@@ -1,0 +1,24 @@
+<%= simple_form_for @profile do |f| %>
+
+  <div class="field">
+    <%= f.input :first_name, label: 'First Name' %>
+  </div>
+
+  <div class="field">
+    <%= f.input :last_name, label: 'Last Name' %>
+  </div>
+
+  <div class="field">
+    <%= f.input :birthday, as: :date, start_year: Date.today.year - 90,
+                                end_year: Date.today.year - 12,
+                                order: [:month, :day, :year], label: 'Date of Birth' %>
+  </div>
+
+  <div class="field">
+    <%= f.input :zip_code, label: 'Zip Code' %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit, class: "button" %>
+  </div>
+  <% end %>
