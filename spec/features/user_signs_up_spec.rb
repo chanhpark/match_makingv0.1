@@ -32,6 +32,7 @@ feature 'user registers', %Q{
 
     expect(page).to have_content('Welcome! You have signed up successfully.')
     expect(page).to have_content('Sign Out')
+    expect(page).to have_content("Start your Profile")
   end
 
   scenario 'provide invalid registration information' do

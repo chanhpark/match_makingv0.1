@@ -16,6 +16,7 @@ feature 'user signs in', %Q{
 
     expect(page).to have_content('Signed in successfully')
     expect(page).to have_content('Sign Out')
+    expect(page).to have_content('Profile')
   end
 
   scenario 'specify invalid credentials' do
